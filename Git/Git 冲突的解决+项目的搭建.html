@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 冲突的解决+项目的搭建 | wqk</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/wqk0825/cdn/img/4.jpg">
+    <meta name="description" content="我的个人博客">
+    
+    <link rel="preload" href="/assets/css/0.styles.a93b8b6e.css" as="style"><link rel="preload" href="/assets/js/app.dc736890.js" as="script"><link rel="preload" href="/assets/js/2.47821fb6.js" as="script"><link rel="preload" href="/assets/js/7.36793eee.js" as="script"><link rel="prefetch" href="/assets/js/10.909813ea.js"><link rel="prefetch" href="/assets/js/11.86e8fb5a.js"><link rel="prefetch" href="/assets/js/12.768b654b.js"><link rel="prefetch" href="/assets/js/13.bba504f8.js"><link rel="prefetch" href="/assets/js/14.b7005b00.js"><link rel="prefetch" href="/assets/js/15.88d224a5.js"><link rel="prefetch" href="/assets/js/16.b5443454.js"><link rel="prefetch" href="/assets/js/17.da698a75.js"><link rel="prefetch" href="/assets/js/18.2d6c437d.js"><link rel="prefetch" href="/assets/js/3.89b75435.js"><link rel="prefetch" href="/assets/js/4.9c0d3927.js"><link rel="prefetch" href="/assets/js/5.8fb2962b.js"><link rel="prefetch" href="/assets/js/6.7a505dc8.js"><link rel="prefetch" href="/assets/js/8.46978706.js"><link rel="prefetch" href="/assets/js/9.2fb7f886.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.a93b8b6e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="https://cdn.jsdelivr.net/gh/wqk0825/cdn/img/4.jpg" alt="wqk" class="logo"> <span class="site-name can-hide">wqk</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/Git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/JavaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/Vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/english/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/Git/" class="nav-link router-link-active">
+  Git
+</a></div><div class="nav-item"><a href="/JavaScript/" class="nav-link">
+  JavaScript
+</a></div><div class="nav-item"><a href="/Vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Language Menu" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  Chinese
+</a></li><li class="dropdown-item"><!----> <a href="/language/english/" class="nav-link">
+  English
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Git/" aria-current="page" class="sidebar-link">Git</a></li><li><a href="/Git/github创建ssh.html" class="sidebar-link">github创建ssh</a></li><li><a href="/Git/cdn加速.html" class="sidebar-link">cdn加速</a></li><li><a href="/Git/Git 冲突的解决+项目的搭建.html" class="active sidebar-link">Git 冲突的解决+项目的搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Git/Git 冲突的解决+项目的搭建.html#git-冲突的解决" class="sidebar-link">Git 冲突的解决</a></li><li class="sidebar-sub-header"><a href="/Git/Git 冲突的解决+项目的搭建.html#项目的搭建" class="sidebar-link">项目的搭建</a></li><li class="sidebar-sub-header"><a href="/Git/Git 冲突的解决+项目的搭建.html#axios-的二次封装" class="sidebar-link">Axios 的二次封装</a></li></ul></li><li><a href="/Git/git命令.html" class="sidebar-link">git命令</a></li><li><a href="/Git/git教程.html" class="sidebar-link">git教程</a></li><li><a href="/Git/markdown搭建和上传图片.html" class="sidebar-link">markdown搭建和上传图片</a></li><li><a href="/Git/使用PicGo上传github图床+博客上线.html" class="sidebar-link">使用PicGo上传github图床+博客上线</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="git-冲突的解决"><a href="#git-冲突的解决" class="header-anchor">#</a> Git 冲突的解决</h2> <ol><li>A写了A.js代码</li> <li>A 提交了</li> <li>B也写了A.js</li> <li>B也提交了</li> <li>此时就会出现下图的冲突问题</li></ol> <img src="https://cdn.jsdelivr.net/gh/hape666/cdn/img/image-20210820090118945.png" alt="image-20210820090118945" style="zoom:50%;"> <h3 id="解决方法"><a href="#解决方法" class="header-anchor">#</a> 解决方法</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;&lt;</span><span class="token operator">&lt;&lt;</span><span class="token operator">&lt;&lt;</span><span class="token operator">&lt;</span> <span class="token constant">HEAD</span> <span class="token operator">:</span>   <span class="token constant">HEAD</span>到<span class="token operator">===</span><span class="token operator">===</span><span class="token operator">=</span> 本地的代码
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">&gt;</span> middleVal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//...</span>
+<span class="token operator">===</span><span class="token operator">===</span><span class="token operator">=</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>target <span class="token operator">===</span> middle<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//...</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token operator">&gt;&gt;&gt;</span><span class="token operator">&gt;&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token constant">A</span>   <span class="token comment">// 远程的代码</span>
+</code></pre></div><p>当B修改完冲突</p> <ol><li>B: git add .</li> <li>B: git commit -m '修改冲突'</li> <li>B:  git push origin dev</li> <li>A : 在A分支 git pull origin dev</li> <li>B : 在B分支 git pull origin dev</li></ol> <h2 id="项目的搭建"><a href="#项目的搭建" class="header-anchor">#</a> 项目的搭建</h2> <ol><li><p>.git 删掉 需要关联自己的仓库地址</p></li> <li><p>.gitignore</p></li> <li><p>搭建项目</p> <ol><li><p>路由</p></li> <li><p>请求</p> <p>公司的开发规范</p> <p>测试地址 : http://118.89.234.135</p> <p>线上地址 : http://bb.shoujiduoduo.com/baby/bb.php</p> <div class="language-js extra-class"><pre class="language-js"><code>axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'所有地址'</span><span class="token punctuation">)</span>
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'所有地址'</span><span class="token punctuation">)</span>
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'所有地址'</span><span class="token punctuation">)</span>
+axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'所有地址'</span><span class="token punctuation">)</span>
+</code></pre></div></li> <li><p>怎么处理:</p></li></ol></li></ol> <p>如果遇到如下的错误 就是跨域出现的错误</p> <blockquote><p>如果不允许跨域 :</p> <p>本地开发:</p> <p>​	设置代理</p> <p>线上 :</p> <p>​	node做中间层</p> <p>​	nginx</p> <p>后端 :</p> <p>​	cors : 后端设置</p></blockquote> <p><img src="https://cdn.jsdelivr.net/gh/hape666/cdn/img/image-20210820143624824.png" alt=""></p> <h2 id="axios-的二次封装"><a href="#axios-的二次封装" class="header-anchor">#</a> Axios 的二次封装</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 创建了一个axios 实例</span>
+<span class="token keyword">let</span> service <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  baseURL<span class="token operator">:</span><span class="token string">'http://bb.shoujiduoduo.com/baby/bb.php'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 设置请求的拦截</span>
+service<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token parameter">config</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 设置请求头  token</span>
+  config<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+    token<span class="token operator">:</span> <span class="token string">'abc'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> config<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+
+<span class="token comment">// /baby/bb.php?type=getvideos&amp;pagesize=30&amp;collectid=29</span>
+
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> service<span class="token punctuation">;</span>
+
+</code></pre></div><p><img src="https://cdn.jsdelivr.net/gh/hape666/cdn/img/image-20210820144549129.png" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Git/cdn加速.html" class="prev">
+        cdn加速
+      </a></span> <span class="next"><a href="/Git/git命令.html">
+        git命令
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.dc736890.js" defer></script><script src="/assets/js/2.47821fb6.js" defer></script><script src="/assets/js/7.36793eee.js" defer></script>
+  </body>
+</html>
